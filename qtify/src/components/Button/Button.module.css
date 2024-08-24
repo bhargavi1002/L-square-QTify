@@ -1,0 +1,12 @@
+
+  .buttonStyle{
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color:#34C94B;
+    border-radius:0.75rem ;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 170px;
+    height: 47px; 
+    font-size: 18px;
+  }
