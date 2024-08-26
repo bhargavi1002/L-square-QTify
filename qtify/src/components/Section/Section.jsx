@@ -37,7 +37,7 @@ const Section = ({title, api}) =>{
     fontWeight: 'bold',
     fontSize: 20
   }}>
-            {isCollapsed ? 'Show All' : 'Collapse'}
+            {isCollapsed ? 'Collapse' : 'Show All'}
           </Button>
         </Box>
 
