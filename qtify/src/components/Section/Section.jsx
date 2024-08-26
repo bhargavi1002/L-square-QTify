@@ -4,12 +4,12 @@ import { Box, Typography, Button } from '@mui/material';
 import Card from "../Card/Card";
 
 
-const Section = ({title}) =>{
+const Section = ({title, api}) =>{
     const [albums, setAlbums] = useState([]);
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     useEffect(() => {
-       axios.get('https://qtify-backend-labs.crio.do/albums/top') 
+       axios.get(api) 
        .then(response => {
         setAlbums(response.data);
        })
