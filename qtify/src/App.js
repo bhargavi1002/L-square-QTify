@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
-import Buttons from './components/Button/Button';
+import Section from './components/Section/Section'
 
 function App() {
   const searchData=[];
@@ -10,6 +10,7 @@ function App() {
     <div className="App">
     <Navbar searchData={searchData} />
     <Hero />
+    <Section title = "Top Albums" />
     </div>
   );
 }
