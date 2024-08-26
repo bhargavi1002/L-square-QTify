@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box, Typography, Button } from '@mui/material';
 import Card from "../Card/Card";
+import Carousel from '../Carousel/Carousel';
 
 
 const Section = ({title, api}) =>{
@@ -23,6 +24,9 @@ const Section = ({title, api}) =>{
         setIsCollapsed(!isCollapsed);
     }
 
+    const navigationPrevId = `swiper-button-prev-${title.replace(/\s+/g, '-')}`;
+    const navigationNextId = `swiper-button-next-${title.replace(/\s+/g, '-')}`;
+
     return(
         <Box sx={{ padding: 3 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginleft: 4}}>
@@ -37,7 +41,19 @@ const Section = ({title, api}) =>{
           </Button>
         </Box>
 
-        {!isCollapsed && (
+        {!isCollapsed ?(
+            <Carousel  items={albums.map(album => (
+                <Card
+                  key={album.id}
+                  image={album.image}
+                  follows={`${album.follows} Follows`}
+                  name={album.title}
+                />
+              ))}
+              navigationPrevId={navigationPrevId}
+              navigationNextId={navigationNextId}
+               />
+        ) : (
             <Box
           sx={{
             display: 'grid',
