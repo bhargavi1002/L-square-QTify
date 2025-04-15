@@ -7,10 +7,9 @@ import Tab from './components/Tab/Tab'
 
 
 function App() {
-  const searchData=[];
   return (
     <div className="App">
-    <Navbar searchData={searchData} />
+    <Navbar/>
     <Hero />
     <Section title = "Top Albums" api="https://qtify-backend-labs.crio.do/albums/top" />
     <Section title = "New Albums" api="https://qtify-backend-labs.crio.do/albums/new" />

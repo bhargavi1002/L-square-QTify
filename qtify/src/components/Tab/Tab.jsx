@@ -21,6 +21,10 @@ const CustomTabs = styled(Tabs)(({ theme }) => ({
 const CustomTab = styled(Tab)(({ theme }) => ({
   textTransform: 'none',
   fontWeight: 'bold',
+  color: '#FFFFFF', 
+  '&.Mui-selected': {
+    color: '#00FF00', 
+  },
 }));
 
 const SongsSection = () => {

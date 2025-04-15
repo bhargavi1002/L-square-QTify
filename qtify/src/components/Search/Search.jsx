@@ -25,7 +25,7 @@ const Listbox = styled("ul")(({ theme }) => ({
   bottom: 0,
   right: 0,
   listStyle: "none",
-  backgroundColor: "var(--color-black)",
+  backgroundColor: "#f5f5f5",
   overflow: "auto",
   "& li.Mui-focused": {
     backgroundColor: "#4a8df6",
